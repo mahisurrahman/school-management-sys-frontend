@@ -5,13 +5,13 @@ import TopHeader from "../../../shared/components/navigationBar/TopHeader/TopHea
 
 function AdminLayout() {
   return (
-    <div className="grid grid-cols-12 bg-green-500">
-      <div className="col-span-2">
-        <NavigationBar />
-      </div>
-      <div className="col-span-10 w-full">
+    <div className="font-poppins flex">
+      <NavigationBar />
+      <div className="w-full h-screen overflow-y-auto">
         <TopHeader />
-        <Outlet />
+        <div className="px-5 py-5 bg-gray-200">
+          <Outlet />
+        </div>
       </div>
     </div>
   );

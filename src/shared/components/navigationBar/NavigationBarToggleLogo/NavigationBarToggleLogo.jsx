@@ -12,7 +12,7 @@ function NavigationBarToggleLogo({ toggleSidebar, isSidebarOpen }) {
         )}
         <button
           onClick={toggleSidebar}
-          className="p-2 hover:bg-gray-700 rounded-lg transition-colors"
+          className="p-2 hover:bg-gray-700 rounded transition-colors"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"

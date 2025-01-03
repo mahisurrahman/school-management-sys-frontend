@@ -1,6 +1,5 @@
 import React from "react";
 import { Route, Routes } from "react-router";
-import HomeLayouts from "./shared/layouts/homeLayout/HomeLayouts";
 import AdminLayout from "./shared/layouts/AdminLayout/AdminLayout";
 import AdminDashboard from "./features/AdminPanel/Pages/AdminDashboard/AdminDashboard";
 

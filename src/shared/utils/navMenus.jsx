@@ -281,7 +281,7 @@ const createMenuConfig = () => {
     {
       id: "mark",
       icon: <BookOpenCheck className="w-5 h-5" />,
-      label: "mark",
+      label: "Mark",
       path: "/mark",
       subMenus: [
         {

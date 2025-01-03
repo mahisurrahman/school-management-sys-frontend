@@ -1,17 +1,16 @@
 import React, { useRef, useEffect, useState } from "react";
-import { Link } from "react-router";
+import { Link } from "react-router-dom";
 
 const NavigationMenus = ({
   menuItems,
   toggleSubMenu,
   isSidebarOpen,
   openSubMenus,
+  activeMenu,
 }) => {
-  // Store submenu heights
   const [subMenuHeights, setSubMenuHeights] = useState({});
   const subMenuRefs = useRef({});
 
-  // Calculate and store submenu heights after initial render
   useEffect(() => {
     const heights = {};
     menuItems.forEach((item) => {
@@ -24,7 +23,7 @@ const NavigationMenus = ({
 
   return (
     <nav
-      className="flex-1 mt-4 h-[50%] overflow-y-scroll text-sm"
+      className="flex-1 h-[50%] overflow-y-scroll text-sm"
       style={{
         scrollbarWidth: "none",
         msOverflowStyle: "none",
@@ -38,7 +37,7 @@ const NavigationMenus = ({
                 onClick={() => toggleSubMenu(item.id)}
                 className={`w-full flex items-center p-3 hover:bg-gray-700/50 transition-all duration-300 ${
                   !isSidebarOpen ? "justify-center" : "justify-between"
-                }`}
+                } ${activeMenu === item.id ? "bg-gray-700" : ""}`}
               >
                 <div className="flex items-center">
                   <div className="transition-transform duration-300 group-hover:scale-110">
@@ -91,7 +90,7 @@ const NavigationMenus = ({
                     className={`flex items-center py-2 transition-all duration-200 
                       hover:bg-gray-700/50 group/subitem ${
                         isSidebarOpen ? "px-11" : "px-4 justify-center"
-                      }`}
+                      } ${activeMenu === subItem.id ? "bg-gray-700" : ""}`}
                   >
                     <div className="transition-transform duration-200 group-hover/subitem:scale-110">
                       {subItem.icon}
@@ -112,7 +111,7 @@ const NavigationMenus = ({
               to={item.path}
               className={`flex items-center p-3 hover:bg-gray-700/50 transition-all duration-300 ${
                 !isSidebarOpen && "justify-center"
-              }`}
+              } ${activeMenu === item.id ? "bg-gray-700" : ""}`}
             >
               <div className="transition-transform duration-300 group-hover:scale-110">
                 {item.icon}
