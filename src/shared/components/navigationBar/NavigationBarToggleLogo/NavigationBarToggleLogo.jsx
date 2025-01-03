@@ -1,12 +1,12 @@
 import React from "react";
 
-function NavigationBarToggleLogo({toggleSidebar, isSidebarOpen}) {
+function NavigationBarToggleLogo({ toggleSidebar, isSidebarOpen }) {
   return (
     // {/* Sidebar Toggle Button */}
     <div className="p-4 border-t border-gray-700 bg-gray-800 text-white">
       <div className="flex items-center justify-between mb-4">
         {isSidebarOpen && (
-          <h1 className="text-lg font-bold">
+          <h1 className="text-md font-bold">
             School Management Software (SMS)
           </h1>
         )}

@@ -1,10 +1,8 @@
 // Layout.jsx
 import React, { useState } from "react";
-import { Link, Outlet } from "react-router-dom";
 import NavigationBarToggleLogo from "./NavigationBarToggleLogo/NavigationBarToggleLogo";
 import NavigationBarAdminProfile from "./NavigationBarAdminProfile/NavigationBarAdminProfile";
 import NavigationMenus from "./navigationMenus/NavigationMenus";
-import TopHeader from "./TopHeader/TopHeader";
 import { menuItems } from "../../utils/navMenus";
 
 const NavigationBar = () => {
@@ -26,7 +24,7 @@ const NavigationBar = () => {
     <div className="flex h-screen bg-gray-100">
       <aside
         className={`${
-          isSidebarOpen ? "w-64" : "w-16"
+          isSidebarOpen ? "w-full" : "w-16"
         } bg-slate-800 text-white transition-all duration-300 ease-in-out relative flex flex-col`}
       >
         <NavigationBarToggleLogo
@@ -43,9 +41,6 @@ const NavigationBar = () => {
           toggleSubMenu={toggleSubMenu}
         />
       </aside>
-
-      {/* Main Content */}
-      <TopHeader Outlet={Outlet} />
     </div>
   );
 };

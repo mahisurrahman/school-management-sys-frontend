@@ -1,13 +1,17 @@
-import React from 'react'
-import { Route, Routes } from 'react-router'
-import HomeLayouts from './shared/layouts/homeLayout/HomeLayouts'
+import React from "react";
+import { Route, Routes } from "react-router";
+import HomeLayouts from "./shared/layouts/homeLayout/HomeLayouts";
+import AdminLayout from "./shared/layouts/AdminLayout/AdminLayout";
+import AdminDashboard from "./features/AdminPanel/Pages/AdminDashboard/AdminDashboard";
 
 const App = () => {
   return (
     <Routes>
-      <Route path="/" element={<HomeLayouts />} />
+      <Route element={<AdminLayout />}>
+        <Route path="/admin/dashboard" element={<AdminDashboard />} />
+      </Route>
     </Routes>
-  )
-}
+  );
+};
 
-export default App
+export default App;
