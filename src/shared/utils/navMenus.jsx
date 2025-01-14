@@ -157,7 +157,7 @@ const createMenuConfig = () => {
       id: "students",
       icon: <Users className="w-5 h-5" />,
       label: "Students",
-      path: "/students",
+      path: "/admin/students",
     },
     {
       id: "teachers",

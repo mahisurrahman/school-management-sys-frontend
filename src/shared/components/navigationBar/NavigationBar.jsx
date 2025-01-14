@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useLocation } from "react-router-dom";
 import NavigationBarToggleLogo from "./NavigationBarToggleLogo/NavigationBarToggleLogo";
 import NavigationBarAdminProfile from "./NavigationBarAdminProfile/NavigationBarAdminProfile";
-import NavigationMenus from "./navigationMenus/NavigationMenus";
+import NavigationMenus from "./NavigationMenus/NavigationMenus";
 import { menuItems } from "../../utils/navMenus";
 
 const NavigationBar = () => {
