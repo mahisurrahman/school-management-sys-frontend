@@ -4,7 +4,7 @@ import StudentTableStatusToggleSwitch from "../StudentTableStatusToggleSwitch/St
 import StudentTableActionButtons from "../StudentsTableActionButtons/StudentTableActionButtons";
 
 const StudentsTableRows = ({ student, index, toggleStudentStatus }) => (
-  <tr className="hover:bg-gray-50">
+  <tr className="hover:bg-gray-50 text-xs">
     <td className="p-4 text-gray-600">{index + 1}</td>
     <td className="p-4">
       <div className="text-teal-500">

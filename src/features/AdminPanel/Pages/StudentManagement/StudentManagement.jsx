@@ -33,10 +33,10 @@ const StudentManagement = () => {
   };
 
   return (
-    <div className="w-full min-h-screen overflow-y-auto">
+    <div className="w-full min-h-screen overflow-y-auto text-sm">
       <div className="w-full mx-auto bg-white rounded-lg shadow">
         <div className="p-4 flex justify-between items-center border-b">
-          <h1 className="text-xl font-semibold">Student</h1>
+          <h1 className="text-xl font-semibold">Students</h1>
           <button className="bg-teal-500 text-white px-4 py-2 rounded hover:bg-teal-600">
             Add a student
           </button>
@@ -55,8 +55,8 @@ const StudentManagement = () => {
           </div>
         </div>
 
-        <div className="overflow-x-auto">
-          <div className="p-4 flex gap-2">
+        <div className="overflow-x-auto ">
+          <div className="p-4 flex gap-2 text-xs text-gray-500">
             <button className="px-4 py-2 border rounded hover:bg-gray-50">
               Copy
             </button>
@@ -73,7 +73,7 @@ const StudentManagement = () => {
 
           <table className="w-full">
             <thead>
-              <tr className="bg-gray-50">
+              <tr className="bg-gray-50 text-sm">
                 <th className="p-4 text-left text-gray-600">#</th>
                 <th className="p-4 text-left text-gray-600">Photo</th>
                 <th className="p-4 text-left text-gray-600">Name</th>
@@ -96,7 +96,7 @@ const StudentManagement = () => {
           </table>
 
           <div className="p-4 flex justify-between items-center">
-            <p className="text-gray-600">Showing 1 to 9 of 9 entries</p>
+            <p className="text-gray-600 text-sm">Showing 1 to 9 of 9 entries</p>
             <div className="flex gap-2">
               <button
                 className="px-4 py-2 border rounded hover:bg-gray-50 disabled:opacity-50"
